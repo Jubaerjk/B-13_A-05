@@ -1,0 +1,60 @@
+/*
+*1.Let, const, var
+
+A. var characterstics-->
+    1. function scoped
+    2. can redeclare & reassign
+    3. hoisted & initialized with undefined
+    4. can be declared without initialization
+
+    !don't use var as it hoinst data in global window object
+
+B. let characteristics
+    1. block scoped
+    2. can reassign but can't redeclare
+    3. hoisted & can't access before declaration
+    4. can be declared without initialization
+
+C. const characteristics
+    1. block scoped
+    2. can't redeclare & reassign
+    3. hoisted & can't access before declaration
+    4. can't be declared without initialization
+*/
+
+/*
+*2. Spread Operator (...)
+
+A.helps with expanding elements of iterables and object into individual elements & creates new array or object with those elements
+
+*/
+
+/*
+*3. map(),filter(),forEach()
+
+A.map()- iterates over array and returns elements
+
+B.filter()- iterates over array and returns elements that satisfy the condition
+
+C.forEach()- iterates over array and returns nothing(undefined)
+
+*/
+
+/*
+
+*4.Arrow Function
+
+A.arrow function is a shorthand way of writing function with automatic return(if single expression)
+
+*/
+
+/*
+*5.Template Literals
+
+A.a way to create strings with backticks to easily insert variables and expressions inside strings
+
+*/
+
+
+
+

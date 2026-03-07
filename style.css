@@ -1,0 +1,12 @@
+.status-open {
+  box-shadow: 0px -4px 0px 0 rgba(0, 255, 0, 0.5);
+}
+
+.status-closed {
+  box-shadow: 0px -4px 0px 0 rgba(255, 0, 0, 0.5);
+}
+
+.active {
+  background-color: #1900ff;
+  color: white;
+}
