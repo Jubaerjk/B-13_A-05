@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Issues Tracker-Home</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#f8fafc]">
+    <header>
+      <nav
+        class="navbar bg-white shadow-md flex justify-between items-center py-8"
+      >
+        <div class="nav-left">
+          <a href="#" class="nav-logo flex items-center">
+            <img class="max-w-[36px]" src="./assets/github-logo.png" alt="" />
+            <span class="font-semibold text-2xl">GitHub Issues Tracker</span>
+          </a>
+        </div>
+
+        <div class="nav-right">
+          <div class="search flex">
+            <div>
+              <label class="input validator join-item">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                  id="input-search"
+                  type="text"
+                  placeholder="Search Vocabulary"
+                  required
+                />
+              </label>
+            </div>
+            <button id="btn-search" class="btn btn-primary join-item">
+              Search
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>

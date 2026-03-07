@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Issues Tracker-Login</title>
+
+    <link rel="shortcut icon" href="./assets/warning.png" type="image/x-icon" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    class="bg-[#f8fafc] w-full h-screen flex items-center justify-center font-['Roboto']"
+  >
+    <section
+      class="mx-auto items-center justify-self-center bg-white shadow-md p-8 rounded-lg"
+    >
+      <div class="container mx-auto items-center">
+        <header class="text-center flex flex-col justify-center">
+          <img
+            class="max-w-[100px] self-center mb-6"
+            src="./assets/github-logo.png"
+            alt=""
+          />
+          <h1 class="text-2xl font-semibold text-[#1F2937]">
+            GitHub Issues Tracker
+          </h1>
+          <p class="text-[#64748B]">Sign in to manage your issues</p>
+        </header>
+
+        <form class="fieldset rounded-box w-md p-4">
+          <fieldset class="fieldset">
+            <label class="label font-medium text-[#1F2937] text-[16px]"
+              >Username</label
+            >
+            <input
+              id="username"
+              type="text"
+              class="input validator w-full"
+              required
+              placeholder="Enter Username"
+              pattern="[A-Za-z][A-Za-z0-9\-]*"
+              minlength="3"
+              maxlength="30"
+              title="Only letters, numbers or dash"
+            />
+            <p class="validator-hint hidden">
+              Must be 3 to 30 characters
+              <br />containing only letters, numbers or dash
+            </p>
+          </fieldset>
+          <fieldset class="fieldset">
+            <span class="label font-medium text-[#1F2937] text-[16px]">
+              Password
+            </span>
+            <input
+              id="password"
+              type="password"
+              class="input validator w-full"
+              placeholder="Enter Password"
+              required
+            />
+            <span class="validator-hint hidden">Required</span>
+          </fieldset>
+
+          <button
+            id="login-btn"
+            class="btn btn-primary my-4 text-lg"
+            type="submit"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <script src="./script/login.js"></script>
+  </body>
+</html>
