@@ -65,75 +65,6 @@ const updateIssueCount = (type) => {
   }
 };
 
-// const displayIssues = (issues) => {
-//   const cardContainer = document.getElementById("card-container");
-//   cardContainer.innerHTML = "";
-//   issues.forEach((issue) => {
-//     const card = document.createElement("div");
-//     card.classList.add("card", "bg-white", "shadow-sm", "rounded-lg");
-//     if (issue.status === "open") {
-//       card.classList.add("status-open");
-//     } else {
-//       card.classList.add("status-closed");
-//     }
-//     card.innerHTML = `
-//     <button onclick="showDetails(${index})" class="block w-full text-left p-4 rounded-lg shadow hover:shadow-md transition">
-
-//   <!-- Header -->
-//   <div class="flex justify-between items-center mb-2">
-//     <img class="w-6 h-6" src="./assets/Open-Status.png" alt="Open Status" />
-//     <a class="text-[#EF4444] bg-red-100 py-1 px-4 rounded-full font-medium">
-//       ${issue.priority || "High"}
-//     </a>
-//   </div>
-
-//   <!-- Title & Description -->
-//   <h2 class="text-lg font-semibold text-[#1F2937] mb-1">
-//     ${issue.title}
-//   </h2>
-//   <p class="text-[#64748B] mb-3">
-//     ${issue.description}
-//   </p>
-
-//   <!-- Labels -->
-//   <div class="flex gap-2 items-center mb-3 text-xs uppercase">
-//     <a class="text-red-500 bg-red-100 border border-red-500 py-1 px-4 rounded-full flex items-center gap-2">
-//       <i class="fa-solid fa-bug"></i>
-//       <span>${issue.labels[0]}</span>
-//     </a>
-//     <a class="text-[#D97706] bg-[#FFF8DB] border border-[#D97706] py-1 px-4 rounded-full flex items-center gap-2">
-//       <i class="fa-regular fa-life-ring"></i>
-//       <span>${issue.labels[1]}</span>
-//     </a>
-//   </div>
-
-//   <hr class="my-4 opacity-30" />
-
-//   <!-- Footer -->
-//   <div class="space-y-2 text-sm">
-//     <p>
-//       Added By:
-//       <span class="font-semibold text-[#1F2937] text-[16px]">${issue.author}</span>
-//     </p>
-//     <p>
-//       Date:
-//       <span class="font-semibold text-[#1F2937] text-[16px]">${issue.createdAt}</span>
-//     </p>
-//   </div>
-
-// </button>
-//   `;
-//     cardContainer.append(card);
-//   });
-// };
-
-// const showDetails = (index) => {
-//   const data = allIssues[index];
-//   console.log(data);
-//   displayDetails(data);
-// };
-// Instead of relying on index + global allIssues,
-// pass the actual issue object directly.
 const displayIssues = (issues) => {
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = "";
@@ -302,6 +233,8 @@ const handleSearch = () => {
     issue.title.toLowerCase().includes(searchTerm),
   );
   displayIssues(filteredIssues);
+  updateIssueCount("search");
+  resetActiveNavigation();
 };
 
 searchBtn.addEventListener("click", handleSearch);
