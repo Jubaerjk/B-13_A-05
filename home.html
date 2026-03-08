@@ -35,12 +35,14 @@
   <body class="bg-[#f2f7fc]">
     <header>
       <nav
-        class="navbar mx-auto bg-white shadow-sm flex justify-between items-center py-8 px-12"
+        class="navbar mx-auto bg-white shadow-sm flex justify-between items-center py-clamp(1rem,2vw,1.5rem) px-clamp(1rem,2vw,1.5rem)"
       >
         <div class="nav-left">
           <a href="#" class="nav-logo flex items-center gap-2">
             <img class="max-w-[36px]" src="./assets/github-logo.png" alt="" />
-            <span class="font-semibold text-2xl">GitHub Issues Tracker</span>
+            <span class="font-semibold [font-size:clamp(1rem,2vw,1.5rem)]"
+              >GitHub Issues Tracker</span
+            >
           </a>
         </div>
 
@@ -50,7 +52,7 @@
               <label class="input validator">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input
-                  class="w-full font-medium"
+                  class="max-w-full font-medium"
                   id="input-search"
                   type="text"
                   placeholder="Search Issues"
@@ -58,7 +60,10 @@
                 />
               </label>
             </div>
-            <button id="btn-search" class="btn btn-primary text-lg font-medium">
+            <button
+              id="btn-search"
+              class="btn btn-primary text-clamp(0.8rem,1vw,1rem) font-medium"
+            >
               Search
             </button>
           </div>

@@ -228,7 +228,7 @@ const input = document.getElementById("input-search");
 const searchBtn = document.getElementById("btn-search");
 
 const handleSearch = () => {
-  const searchTerm = input.value.toLowerCase();
+  const searchTerm = input.value.toLowerCase().trim();
   const filteredIssues = allIssues.filter((issue) =>
     issue.title.toLowerCase().includes(searchTerm),
   );
