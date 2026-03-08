@@ -104,8 +104,12 @@ const displayIssues = (issues) => {
             <span>${issue.labels[0]}</span>
           </a>
           <a class="text-[#D97706] bg-[#FFF8DB] border border-[#D97706] py-1 px-4 rounded-full flex items-center gap-2">
+          
+          <span>
             <i class="fa-regular fa-life-ring"></i>
-            <span>${issue.labels[1]}</span>
+            ${issue.labels?.[1] ?? ""}
+          </span>
+
           </a>
         </div>
 
