@@ -189,10 +189,13 @@ const displayDetails = (data) => {
       <i class="fa-solid fa-bug"></i>
       <span>${data.labels[0]}</span>
     </a>
-    <a class="text-[#D97706] bg-[#FFF8DB] border border-[#D97706] py-1 px-4 rounded-full flex items-center gap-2">
-      <i class="fa-regular fa-life-ring"></i>
-      <span>${data.labels[1]}</span>
-    </a>
+     ${
+       data.labels?.[1]
+         ? `<a class="text-[#D97706] bg-[#FFF8DB] border border-[#D97706] py-1 px-4 rounded-full flex items-center gap-2">
+             <span><i class="fa-regular fa-life-ring"></i>${data.labels[1]}</span>
+           </a>`
+         : ""
+     }
   </div>
 
   <!-- Description -->
